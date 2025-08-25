@@ -8,6 +8,19 @@ let countItem = items.length;
 let itemActive = 0;
 
 // event next click
+window.addEventListener('DOMContentLoaded', () => {
+    const audio = document.getElementById('bg-music');
+
+    const enableAudio = () => {
+      audio.muted = false;
+      audio.play().catch(err => {
+        console.warn('Autoplay failed:', err);
+      });
+      window.removeEventListener('click', enableAudio);
+    };
+
+    window.addEventListener('click', enableAudio);
+  });
 next.onclick = function(){
     itemActive = itemActive + 1;
     if(itemActive >= countItem){
@@ -61,4 +74,5 @@ thumbnails.forEach((thumbnail, index) => {
     })
 
 })
+
 
