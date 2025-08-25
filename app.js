@@ -6,6 +6,11 @@ let thumbnails = document.querySelectorAll('.thumbnail .item');
 // config param
 let countItem = items.length;
 let itemActive = 0;
+window.addEventListener('click', function () {
+        const audio = document.getElementById("bg-music");
+        audio.muted = false;
+        audio.play();
+    }, { once: true });
 // event next click
 next.onclick = function(){
     itemActive = itemActive + 1;
@@ -58,4 +63,5 @@ thumbnails.forEach((thumbnail, index) => {
         itemActive = index;
         showSlider();
     })
+
 })
