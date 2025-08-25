@@ -64,7 +64,7 @@ header .menu{
 .slider .list .item .content{
     position: absolute;
     left: 10%;
-    top: 16%;
+    top: 12%;
     width: 500px;
     max-width: 80%;
     z-index: 1;
@@ -170,4 +170,5 @@ header .menu{
         top: 10%;
     }
 }
+
 
